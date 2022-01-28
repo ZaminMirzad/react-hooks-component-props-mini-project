@@ -1,9 +1,11 @@
 
 function About(props){
+    const {image, about} = props;
+    const imgsrc = image===undefined? "https://via.placeholder.com/215" : image;
     return (
         <aside>
-            <img src={props.image} placeholder="https://via.placeholder.com/215" alt="blog logo"/>
-            <p>{props.about}</p>
+            <img src={imgsrc} alt="blog logo"/>
+            <p>{about}</p>
         </aside>
     );  
 }

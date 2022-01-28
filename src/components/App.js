@@ -5,14 +5,14 @@ import ArticleList from "./ArticleList";
 import Header from "./Header";
 
 
-console.log(blogData);
+// console.log(blogData);
 
 function App() {
   return (
     <div className="App">
       <Header name={blogData.name} />
       <About about={blogData.about} image={blogData.image} />
-      <ArticleList articles={blogData.posts} />
+      <ArticleList posts={blogData.posts} />
     </div>
   );
 }

@@ -1,10 +1,15 @@
-function Article(props){
-    console.log(props.article.title)
+
+function Article({title,date, minutes, preview}){
+    
+    const showDate = (date===undefined) ? "January 1, 1970" : date;
+    // console.log(title);
+
     return(
-        <div key={props.article[1]}>
-            <h3>{props.title}</h3>
-            <small>{props.date}</small>
-        </div>
+        <article >
+            <h3>{title}</h3>
+            <small>{showDate} | {minutes} mins to read</small>
+            <p>{preview}</p>
+        </article>
     );
 }
 
